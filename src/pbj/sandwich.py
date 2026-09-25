@@ -71,3 +71,10 @@ class PBJ:
             f"PBJ(bread={self.bread!r}, peanut_butter={self.peanut_butter!r}, "
             f"jelly={self.jelly!r})"
         )
+    def throw(self) -> None:
+        """Throw the sandwich in the trash."""
+        if self.is_assembled:
+            print("Throwing away the PB&J sandwich...")
+            self.is_assembled = False
+        else:
+            print("The sandwich is not assembled yet, nothing to throw away.")
